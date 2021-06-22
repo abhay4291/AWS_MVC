@@ -17,6 +17,7 @@
 	<groupId>com.synechron.proc.boot</groupId>
 	<artifactId>TestApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 
 	<name>InsuranceProvider</name>
 	<description>Demo project for Spring Boot</description>
