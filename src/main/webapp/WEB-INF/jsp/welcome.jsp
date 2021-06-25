@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<spring:eval expression="@environment.getProperty('host.url')" var="hostUrl" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>User Details</title>
-<style >
+<style>
 body {
 	background-image: url("");
 	background-position: 70% 30%;
@@ -131,30 +133,23 @@ span.fname {
 	<div class="row">
 		<div class="col-75">
 			<div class="container">
-				<form action="http://localhost:8086/customerdetails" method="post">
+				<form action="http://${hostUrl}/customerdetails" method="post">
 
 					<div class="row">
 						<div class="col-50">
-							
+
 							<label for="fname"><i class="Pay_User"></i>Name</label> <input
 								type="text" id="fname" name="name"
-								placeholder="Enter Your name here"> 
-								
-								<label for="age"><i
-								class="Pay_Age"></i> Age</label> <input type="text" id="age"
-								name="age" placeholder="Enter your age"> 
-								
-								<label for="email"><i
+								placeholder="Enter Your name here"> <label for="age"><i
+								class="Pay_Age"></i> Age</label> <input type="text" id="age" name="age"
+								placeholder="Enter your age"> <label for="email"><i
 								class="Pay_Email"></i> Email</label> <input type="text" id="email"
-								name="email" placeholder="Enter your mail id"> 
-								
-								<label for="phone"><i class="Pay_Phone"></i>PhoneNumber</label> <input
+								name="email" placeholder="Enter your mail id"> <label
+								for="phone"><i class="Pay_Phone"></i>PhoneNumber</label> <input
 								type="text" id="phone" name="phonenumber"
-								placeholder="Enter phone number"> 
-								
-								<label
-								for="city"><i class="P_City"></i> City</label> <input
-								type="text" id="cityname" name="cityname" placeholder="Enter your city">
+								placeholder="Enter phone number"> <label for="city"><i
+								class="P_City"></i> City</label> <input type="text" id="cityname"
+								name="cityname" placeholder="Enter your city">
 
 							<div class="row">
 								<div class="col-50">
@@ -164,8 +159,7 @@ span.fname {
 							</div>
 							</label> <input type="submit" value="Get Plan" class="btn">
 						</div>
-						<div class="col-50">
-						</div>
+						<div class="col-50"></div>
 					</div>
 				</form>
 </body>

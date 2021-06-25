@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<spring:eval expression="@environment.getProperty('host.url')" var="hostUrl" />
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -142,7 +144,6 @@ to {
 </style>
 </head>
 <body>
-
 	<center>
 		<h2>
 			<font color=red>Provider Home</font>
@@ -169,7 +170,7 @@ to {
 	<div id="id01" class="modal">
 
 		<form class="modal-content animate"
-			action="http://localhost:8086/login"
+			action="http://${hostUrl}/login"
 			method="POST">
 			<div class="imgcontainer">
 				<span onclick="document.getElementById('id01').style.display='none'"
@@ -216,7 +217,7 @@ to {
 		<span onclick="document.getElementById('id02').style.display='none'"
 			class="close" title="Close Modal">&times;</span>
 		<form class="modal-content"
-			action="http://localhost:8086/register"
+			action="http://${hostUrl}/register"
 			method="POST">
 			<div class="container">
 				<h1>Sign Up</h1>
