@@ -76,7 +76,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>mvc-web-application</finalName>
+		<finalName>abhay</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -87,7 +87,7 @@
 					<target>1.8</target>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<webApp>
-						<contextPath>/mvc-web-application</contextPath>
+						<contextPath>/abhay</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>
